@@ -1,0 +1,17 @@
+#!/bin/sh
+for TEST in 0 1 2 3
+do
+echo $TEST
+for method in serialirr serial gl_wt ml_wt
+do
+echo $method
+  for i in `seq 32`
+do
+    for j in 1
+do
+  ITM_DEFAULT_METHOD=$method ./a.out $i $TEST
+done
+done
+done
+done
+

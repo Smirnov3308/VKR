@@ -1,0 +1,13 @@
+#!/bin/sh
+for method in serialirr serial gl_wt ml_wt
+do
+echo $method
+  for i in `seq 32`
+do
+    for j in `seq 1`
+do
+  ITM_DEFAULT_METHOD=$method ./concurrent_rand $i
+done
+done
+done
+

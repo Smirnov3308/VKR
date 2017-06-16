@@ -1,0 +1,13 @@
+#!/bin/sh
+for TEST in  0 1 2 3 # Тесты
+do
+echo $TEST
+for i in `seq 32`
+do
+    for j in 1
+do
+  ./a.out $i $TEST
+done
+done
+done
+
